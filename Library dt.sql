@@ -68,9 +68,8 @@ WHERE l.DueDate = '2020-07-13'
 AND ReturnedDate IS NULL;
 
 
-/*******************************************************/
 /* Return books to the library                         */
-/*******************************************************/
+
 SELECT * FROM Loans
 WHERE BookID IN (SELECT BookID FROM Books
 WHERE Barcode = 6435968624)
